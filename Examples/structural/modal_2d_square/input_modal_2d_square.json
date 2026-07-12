@@ -1,0 +1,104 @@
+{
+  "metaData": {
+    "type" : "eMachineSimInput",
+		"eMachineSimVersion" : "0.1.0",
+    "comments": "Minimal structural 2D modal sample for Step 1 mass matrix and generalized eigenvalue analysis."
+  },
+  "1_Execution_Control": {
+    "PRE_PROCESSING": 1,
+    "MAKE_SYSTEM_MATRICES": 1,
+    "SOLVE_EQUATION": 1,
+    "POST_PROCESSING": 1
+  },
+  "2_Analysis_Type": {
+    "STATIC": 1,
+    "AC": 0,
+    "DOF_PER_NODE": 3,
+    "ANALYSIS_TYPE": "STRUCTURAL_STATIC"
+  },
+  "3_Potential_Gauge_Conditions": {
+    "RENUMBERING": 0,
+    "SCALING": 0,
+    "LINE_SEARCH": 0,
+    "MATRIX_ASYMMETRICITY": 0
+  },
+  "4_Shape_Function_Order_Added_Features": {
+    "NODE_ORDER": 1,
+    "QUAD_TRI": 0,
+    "PARALLEL_NO": 0,
+    "PARALLEL_OPTION": 0
+  },
+  "5_Convergence_Conditions": {
+    "ICCG_CONV": 1.0e-8,
+    "MAX_ITERATIONS": 1000,
+    "SOLVER": 0
+  },
+  "6_Gaussian_Integral_Point": {
+    "POINTS_IN_1D": 3,
+    "POINT_IN_TRIANGLE": 7,
+    "MAT_POINTS": 1
+  },
+  "10_1_Input_Files": {
+    "INPUT_MESH_FILE": 5,
+    "UNIT": 0
+  },
+  "10_2_Output_Files": {
+    "POST_DATA_FILE": 5,
+    "ELEM_OUT": 1,
+    "NODE_OUT": 1
+  },
+  "12_Geometry": {
+    "GEOMETRY": 0,
+    "DELTA_Z_THETA": 1.0
+  },
+  "13_Boundary_Conditions": {
+    "FAR_BOUNDARY_CONDITION": 0,
+    "STRUCTURAL_2D": {
+      "ENABLED": 1,
+      "MODE": "PLANE_STRESS",
+      "THICKNESS": 0.01
+    },
+    "STRUCTURAL_MODAL": {
+      "ENABLED": 1,
+      "NUM_MODES": 4,
+      "MASS_MATRIX": "CONSISTENT",
+      "MASS_NORMALIZE": 1,
+      "REMOVE_RIGID_BODY_MODES": 1,
+      "RIGID_BODY_FREQUENCY_THRESHOLD": 1.0e-6
+    },
+    "TOOTH_FORCE_MAPPING": {
+      "ENABLED": 1,
+      "FORCE_FILE": "tooth_forces_frequency.csv",
+      "CENTER": [0.0, 0.0],
+      "DISTRIBUTION": "UNIFORM_ON_BOUNDARY",
+      "TEETH": [
+        { "TOOTH_ID": 0, "SMAT_ID": 1 }
+      ]
+    },
+    "STRUCTURAL_DISPLACEMENT_BC": [
+      { "NODE_ID": 1, "FIX_UX": 1, "FIX_UY": 1, "FIX_UZ": 1, "UX": 0.0, "UY": 0.0, "UZ": 0.0 },
+      { "NODE_ID": 2, "FIX_UX": 0, "FIX_UY": 1, "FIX_UZ": 1, "UX": 0.0, "UY": 0.0, "UZ": 0.0 },
+      { "NODE_ID": 4, "FIX_UX": 1, "FIX_UY": 0, "FIX_UZ": 1, "UX": 0.0, "UY": 0.0, "UZ": 0.0 }
+    ]
+  },
+  "16_Material_Properties": {
+    "16_1_3D_Element_Properties": [
+      {
+        "MAT_ID": 1,
+        "ElasticProperty": {
+          "E": 2.1e11,
+          "nu": 0.3,
+          "rho": 7800.0
+        }
+      },
+      {
+        "MAT_ID": 2,
+        "ElasticProperty": {
+          "E": 2.1e11,
+          "nu": 0.3,
+          "rho": 7800.0
+        }
+      }
+    ]
+  }
+}

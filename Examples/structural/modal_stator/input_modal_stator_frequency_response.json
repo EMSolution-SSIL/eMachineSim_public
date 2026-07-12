@@ -1,0 +1,156 @@
+{
+  "metaData": {
+    "type" : "eMachineSimInput",
+		"eMachineSimVersion" : "0.1.0",
+    "comments": "Motor NVH Step 3 sample: sparse modal analysis, ATLAS STRE nodal force mapping, and modal superposition frequency response."
+  },
+  "1_Execution_Control": {
+    "PRE_PROCESSING": 1,
+    "MAKE_SYSTEM_MATRICES": 1,
+    "SOLVE_EQUATION": 1,
+    "POST_PROCESSING": 1
+  },
+  "2_Analysis_Type": {
+    "STATIC": 1,
+    "AC": 0,
+    "DOF_PER_NODE": 3,
+    "ANALYSIS_TYPE": "STRUCTURAL_STATIC"
+  },
+  "3_Potential_Gauge_Conditions": {
+    "RENUMBERING": 0,
+    "SCALING": 0,
+    "LINE_SEARCH": 0,
+    "MATRIX_ASYMMETRICITY": 0
+  },
+  "4_Shape_Function_Order_Added_Features": {
+    "NODE_ORDER": 1,
+    "QUAD_TRI": 0,
+    "PARALLEL_NO": 0,
+    "PARALLEL_OPTION": 0
+  },
+  "5_Convergence_Conditions": {
+    "ICCG_CONV": 1.0e-8,
+    "MAX_ITERATIONS": 1000,
+    "SOLVER": 0
+  },
+  "6_Gaussian_Integral_Point": {
+    "POINTS_IN_1D": 3,
+    "POINT_IN_TRIANGLE": 7,
+    "MAT_POINTS": 1
+  },
+  "10_1_Input_Files": {
+    "INPUT_MESH_FILE": "ATLAS",
+    "MESH_FILE": "stator_mesh2D.atl",
+    "UNIT": 0
+  },
+  "10_2_Output_Files": {
+    "POST_DATA_FILE": "ATLAS",
+    "ELEM_OUT": 1,
+    "NODE_OUT": 1
+  },
+  "12_Geometry": {
+    "GEOMETRY": 0,
+    "DELTA_Z_THETA": 1.0
+  },
+  "13_Boundary_Conditions": {
+    "FAR_BOUNDARY_CONDITION": 0,
+    "STRUCTURAL_2D": {
+      "ENABLED": 1,
+      "MODE": "PLANE_STRESS",
+      "THICKNESS": 0.06
+    },
+    "STRUCTURAL_MODAL": {
+      "ENABLED": 1,
+      "NUM_MODES": 8,
+      "SOLVER": "SPARSE",
+      "MASS_MATRIX": "CONSISTENT",
+      "MASS_NORMALIZE": 1,
+      "REMOVE_RIGID_BODY_MODES": 1,
+      "RIGID_BODY_FREQUENCY_THRESHOLD": 1.0,
+      "SPECTRAL_SHIFT": 1.0e8,
+      "MAX_ITERATIONS": 3000,
+      "TOLERANCE": 1.0e-9
+    },
+    "MOTOR_NVH_NODAL_FORCE": {
+      "ENABLED": 1,
+      "FORCE_FILE": "force2D.atl",
+      "BLOCK_NAME": "STRE",
+      "FORCE_MAPPING_ONLY": 0,
+      "TIME_FFT": 1,
+      "FFT_WINDOW": "NONE",
+      "FFT_REMOVE_DC": 1,
+      "FFT_ONE_SIDED": 1,
+      "FFT_FUNDAMENTAL_FREQUENCY": 50.0,
+      "FFT_SAMPLES_PER_PERIOD": 180,
+      "FORCE_CIRCUMFERENTIAL_ORDER": 1,
+      "FORCE_ORDER_CENTER": [0.0, 0.0],
+      "FORCE_ORDER_NUM_ANGLE_SAMPLES": 360,
+      "FORCE_ORDER_MAX_ORDER": 60,
+      "FORCE_ORDER_EXPAND_TO_FULL_CIRCLE": 1,
+      "FORCE_ORDER_SOURCE_ANGLE_DEG": 180.0,
+      "FORCE_ORDER_TARGET_ANGLE_DEG": 360.0,
+      "FORCE_ORDER_EXPANSION_SIGN": "PERIODIC",
+      "FORCE_ORDER_WRITE_GRID": 1
+    },
+    "MOTOR_NVH_FREQUENCY_RESPONSE": {
+      "ENABLED": 1,
+      "REDUCED_FORCE_FILE": "motor_nvh_nodal_force_fft_reduced_vectors.csv",
+      "DAMPING_TYPE": "MODAL_CONSTANT",
+      "DAMPING_RATIO": 0.02,
+      "TOP_MODES": 5,
+      "WRITE_REDUCED_RESPONSE": 1,
+      "FREQUENCY_SOURCE": "TIME",
+      "FREQUENCY_SCALE": 1.0,
+      "FREQUENCY_OFFSET": 0.0
+    },
+    "MOTOR_NVH_OUTER_VELOCITY": {
+      "ENABLED": 1,
+      "RESPONSE_FILE": "motor_nvh_response_reduced_vectors.csv",
+      "CENTER": [0.0, 0.0],
+      "RADIUS_TOLERANCE_REL": 1.0e-3,
+      "FULL_CIRCLE": 1
+    },
+    "MOTOR_NVH_CIRCUMFERENTIAL_FFT": {
+      "ENABLED": 1,
+      "OUTER_VELOCITY_FILE": "motor_nvh_outer_velocity.csv",
+      "NUM_ANGLE_SAMPLES": 256,
+      "MAX_ORDER": 40,
+      "QUANTITY": "VN",
+      "FULL_CIRCLE": 1,
+      "EXPAND_TO_FULL_CIRCLE": 1,
+      "SOURCE_ANGLE_DEG": 180.0,
+      "TARGET_ANGLE_DEG": 360.0,
+      "EXPANSION_SIGN": "PERIODIC",
+      "WRITE_EXPANDED_OUTER_VELOCITY": 1,
+      "EXPANDED_OUTER_VELOCITY_FILE": "motor_nvh_outer_velocity_expanded.csv"
+    },
+    "MOTOR_NVH_ACOUSTIC_RADIATION": {
+      "ENABLED": 1,
+      "ORDER_SPECTRUM_FILE": "motor_nvh_circumferential_orders.csv",
+      "OUTER_VELOCITY_FILE": "motor_nvh_outer_velocity.csv",
+      "RADIUS": 0.0,
+      "AXIAL_LENGTH": 0.0,
+      "AIR_DENSITY": 1.2041,
+      "SOUND_SPEED": 343.0,
+      "REFERENCE_POWER": 1.0e-12,
+      "PHASOR_CONVENTION": "PEAK",
+      "USE_A_WEIGHTING": 1,
+      "MAX_ORDER": 40,
+      "NUM_PEAKS": 10,
+      "MIN_PEAK_FREQUENCY": 20.0,
+      "MAX_PEAK_FREQUENCY": 20000.0
+    }
+  },
+  "16_Material_Properties": {
+    "16_1_3D_Element_Properties": [
+      {
+        "MAT_ID": 1,
+        "ElasticProperty": {
+          "E": 2.1e11,
+          "nu": 0.3,
+          "rho": 7800.0
+        }
+      }
+    ]
+  }
+}

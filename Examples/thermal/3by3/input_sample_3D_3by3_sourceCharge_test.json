@@ -1,0 +1,239 @@
+{
+    "metaData":  {
+                     "type" : "eMachineSimInput",
+		             "eMachineSimVersion" : "0.1.0",
+                     "comments":  "Thermal analysis sample input."
+                 },
+    "1_Execution_Control":  {
+                                "PRE_PROCESSING":  1,
+                                "MAKE_SYSTEM_MATRICES":  1,
+                                "SOLVE_EQUATION":  1,
+                                "POST_PROCESSING":  1
+                            },
+    "2_Analysis_Type":  {
+                            "STATIC":  1,
+                            "AC":  0,
+                            "DOF_PER_NODE":  3,
+                            "ANALYSIS_TYPE":  "THERMAL_ANALYSIS"
+                        },
+    "3_Potential_Gauge_Conditions":  {
+                                         "RENUMBERING":  0,
+                                         "SCALING":  0,
+                                         "LINE_SEARCH":  0,
+                                         "MATRIX_ASYMMETRICITY":  0
+                                     },
+    "4_Shape_Function_Order_Added_Features":  {
+                                                  "NODE_ORDER":  1,
+                                                  "QUAD_TRI":  0,
+                                                  "PARALLEL_NO":  0,
+                                                  "PARALLEL_OPTION":  0
+                                              },
+    "5_Convergence_Conditions":  {
+                                     "ICCG_CONV":  1E-06,
+                                     "ACCEL_FACTOR":  1.02,
+                                     "DIV_FACTOR":  10,
+                                     "DIV_ITERATIONS":  10,
+                                     "SOLVER":  0,
+                                     "THETA":  0.6666667,
+                                     "MAX_ITERATIONS":  0,
+                                     "5_2_Nonlinear_Convergence_Condition":  {
+                                                                                 "NON_LINEAR_CONV":  0.001,
+                                                                                 "RELAXATION":  1,
+                                                                                 "NO_ITERATIONS":  20,
+                                                                                 "INIT_OPTION":  0,
+                                                                                 "ICCG_CONV_RATIO":  0.001,
+                                                                                 "CHECK_B":  1,
+                                                                                 "NON_LINEAR_METHOD":  0
+                                                                             }
+                                 },
+    "6_Gaussian_Integral_Point":  {
+                                      "POINTS_IN_1D":  3,
+                                      "POINT_IN_TRIANGLE":  7,
+                                      "MAT_POINTS":  1
+                                  },
+    "7_Initial_Conditions":  {
+                                 "INITIAL_STEP":  -1,
+                                 "DATA_TYPE":  0,
+                                 "INITIAL_PHASE":  0,
+                                 "MULTI":  0,
+                                 "OUTPUT_STEP_NO":  0
+                             },
+    "8_Calculation_Step":  {
+                               "NO_STEPS":  [
+                                                1
+                                            ],
+                               "DELTA_TIME":  [
+                                                  0.001
+                                              ],
+                               "INITIAL_TIME":  0
+                           },
+    "9_Output_Step":  {
+                          "TIME_DIFF":  3,
+                          "RESTART_FILE_OPTION":  0,
+                          "ALL_STEP_OUTPUT":  0,
+                          "OUTPUT_STEP_SET":  [
+                                                  [
+                                                      1,
+                                                      1,
+                                                      1
+                                                  ]
+                                              ]
+                      },
+    "10_1_Input_Files":  {
+                             "INPUT_MESH_FILE":  5,
+                             "UNIT":  0,
+                             "NO_MESH":  0,
+                             "MESHLESS":  0
+                         },
+    "10_2_Output_Files":  {
+                              "POST_DATA_FILE":  5,
+                              "ELEM_OUT":  1,
+                              "NODE_OUT":  1,
+                              "AVERAGE":  0,
+                              "WIDE":  0
+                          },
+    "10_3_Post_Files":  {
+                            "MESH":  1,
+                            "ELECTRIC":  1
+                        },
+    "11_Print_Output":  {
+                            "CURRENT":  0
+                        },
+    "12_Geometry":  {
+                        "GEOMETRY":  0,
+                        "DELTA_Z_THETA":  1
+                    },
+    "13_Boundary_Conditions":  {
+                                   "FAR_BOUNDARY_CONDITION":  0,
+                                   "PHI_BOUNDARY_CONDITION":  0,
+                                   "DISTANCE_JUDGE":  0.001,
+                                   "STRUCTURAL_NODAL_LOADS":  [
+
+                                                              ],
+                                   "CENTRIFUGAL_LOAD":  {
+                                                            "ENABLED":  1,
+                                                            "OMEGA":  [
+                                                                          0,
+                                                                          0,
+                                                                          100
+                                                                      ],
+                                                            "AXIS_POINT":  [
+                                                                               0,
+                                                                               0,
+                                                                               0
+                                                                           ]
+                                                        }
+                               },
+    "16_Material_Properties":  {
+                                   "EXTEND_TOTAL_for_COIL":  0,
+                                   "16_1_3D_Element_Properties":  [
+                                                                      {
+                                                                          "MAT_ID":  1,
+                                                                          "ElasticProperty":  {
+                                                                                                  "E":  210000000000,
+                                                                                                  "nu":  0.3,
+                                                                                                  "rho":  7800
+                                                                                              },
+                                                                          "ElectricProperty":  {
+                                                                                                   "permittivity":  {
+                                                                                                                        "comment":  "EPS_XYZ for anisotropic, or isotropic EPS if not defined.",
+                                                                                                                        "EPS":  1.0
+                                                                                                                    },
+                                                                                                   "conductivity":  {
+                                                                                                                        "comment":  "SIGMA_XYZ for anisotropic, or isotropic SIGMA if not defined.",
+                                                                                                                        "SIGMA":  0
+                                                                                                                    }
+                                                                                               },
+                                                                          "ThermalProperty":  {
+                                                                                                  "CONDUCTIVITY":  45
+                                                                                              }
+                                                                      }
+                                                                  ]
+                               },
+    "17_Field_Source":  [
+                            {
+                                "TPOTSUF":  {
+                                                "SERIES_ID":  1,
+                                                "SMAT_ID":  2,
+                                                "POT_OR_CHARGE":  1,
+                                                "TIME_ID":  1,
+                                                "UNIT_TYPE":  0
+                                            }
+                            },
+                            {
+                                "TPOTSUF":  {
+                                                "SERIES_ID":  2,
+                                                "SMAT_ID":  3,
+                                                "POT_OR_CHARGE":  0,
+                                                "TIME_ID":  4,
+                                                "UNIT_TYPE":  0
+                                            }
+                            },
+                            {
+                                "TPOTVOL":  {
+                                                "SERIES_ID":  3,
+                                                "VMAT_ID":  1,
+                                                "TIME_ID":  3,
+                                                "UNIT_TYPE":  1
+                                            }
+                            }
+                        ],
+    "18_Time_Function":  [
+                             {
+                                 "TIME_ID":  1,
+                                 "OPTION":  0,
+                                 "C0":  10,
+                                 "C1":  0,
+                                 "C2":  0,
+                                 "C3":  0,
+                                 "C4":  0,
+                                 "C5":  0,
+                                 "C6":  0,
+                                 "TEXP":  0,
+                                 "TCYCLE":  0,
+                                 "PHASE4":  0
+                             },
+                             {
+                                 "TIME_ID":  2,
+                                 "OPTION":  0,
+                                 "C0":  0,
+                                 "C1":  0,
+                                 "C2":  0,
+                                 "C3":  0,
+                                 "C4":  0,
+                                 "C5":  0,
+                                 "C6":  0,
+                                 "TEXP":  0,
+                                 "TCYCLE":  0,
+                                 "PHASE4":  0
+                             },
+                             {
+                                 "TIME_ID":  3,
+                                 "OPTION":  0,
+                                 "C0":  1000000,
+                                 "C1":  0,
+                                 "C2":  0,
+                                 "C3":  0,
+                                 "C4":  0,
+                                 "C5":  0,
+                                 "C6":  0,
+                                 "TEXP":  0,
+                                 "TCYCLE":  0,
+                                 "PHASE4":  0
+                             },
+                             {
+                                 "TIME_ID":  4,
+                                 "OPTION":  0,
+                                 "C0":  5000,
+                                 "C1":  0,
+                                 "C2":  0,
+                                 "C3":  0,
+                                 "C4":  0,
+                                 "C5":  0,
+                                 "C6":  0,
+                                 "TEXP":  0,
+                                 "TCYCLE":  0,
+                                 "PHASE4":  0
+                             }
+                         ]
+}

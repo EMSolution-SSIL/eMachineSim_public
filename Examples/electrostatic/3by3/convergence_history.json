@@ -1,0 +1,37 @@
+{
+	"metaData" : 
+	{
+		"type" : "eMachineSimInput",
+		"eMachineSimVersion" : "0.1.0",
+		"comments" : "This file is converted from the EMSolution output data."
+	},
+	"analysisCondition" : 
+	{
+		"analysisType" : "ELECTRO_STATIC",
+		"nonlinear" : "LINEAR",
+		"motionType" : "NONE",
+		"circuitType" : "NONE"
+	},
+	"timeStep" : 
+	{
+		"numSteps" : 1,
+		"stepNo" : [ 1 ],
+		"timeUnit" : "second",
+		"time" : [ 1.00000000000000002e-03 ]
+	},
+	"convergenceHistory" : 
+	{
+		"convergence" : 
+		[
+			[ true ]
+		],
+		"no_iterations" : 
+		[
+			[ 2 ]
+		],
+		"residual" : 
+		[
+			[ 4.03481747969405212e-19 ]
+		]
+	}
+}

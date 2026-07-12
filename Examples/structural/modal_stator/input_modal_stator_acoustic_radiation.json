@@ -1,0 +1,52 @@
+{
+  "metaData": {
+    "type" : "eMachineSimInput",
+		"eMachineSimVersion" : "0.1.0",
+    "comments": "Motor NVH Step 6 sample: cylindrical acoustic radiation index from existing circumferential velocity order CSV files."
+  },
+  "1_Execution_Control": {
+    "PRE_PROCESSING": 0,
+    "MAKE_SYSTEM_MATRICES": 0,
+    "SOLVE_EQUATION": 1,
+    "POST_PROCESSING": 0
+  },
+  "2_Analysis_Type": {
+    "STATIC": 1,
+    "AC": 0,
+    "DOF_PER_NODE": 3,
+    "ANALYSIS_TYPE": "STRUCTURAL_STATIC"
+  },
+  "10_1_Input_Files": {
+    "INPUT_MESH_FILE": "ATLAS",
+    "MESH_FILE": "stator_mesh2D.atl",
+    "UNIT": 0
+  },
+  "10_2_Output_Files": {
+    "POST_DATA_FILE": "ATLAS",
+    "ELEM_OUT": 1,
+    "NODE_OUT": 1
+  },
+  "13_Boundary_Conditions": {
+    "STRUCTURAL_2D": {
+      "ENABLED": 1,
+      "MODE": "PLANE_STRESS",
+      "THICKNESS": 0.06
+    },
+    "MOTOR_NVH_ACOUSTIC_RADIATION": {
+      "ENABLED": 1,
+      "ORDER_SPECTRUM_FILE": "motor_nvh_circumferential_orders.csv",
+      "OUTER_VELOCITY_FILE": "motor_nvh_outer_velocity.csv",
+      "RADIUS": 0.0,
+      "AXIAL_LENGTH": 0.0,
+      "AIR_DENSITY": 1.2041,
+      "SOUND_SPEED": 343.0,
+      "REFERENCE_POWER": 1.0e-12,
+      "PHASOR_CONVENTION": "PEAK",
+      "USE_A_WEIGHTING": 1,
+      "MAX_ORDER": 40,
+      "NUM_PEAKS": 10,
+      "MIN_PEAK_FREQUENCY": 20.0,
+      "MAX_PEAK_FREQUENCY": 20000.0
+    }
+  }
+}

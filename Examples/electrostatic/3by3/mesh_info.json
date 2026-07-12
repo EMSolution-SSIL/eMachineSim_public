@@ -1,0 +1,63 @@
+{
+	"metaData" : 
+	{
+		"type" : "eMachineSimInput",
+		"eMachineSimVersion" : "0.1.0",
+		"comments" : "This file is converted from the EMSolution output data."
+	},
+	"analysisCondition" : 
+	{
+		"analysisType" : "ELECTRO_STATIC",
+		"nonlinear" : "LINEAR",
+		"motionType" : "NONE",
+		"circuitType" : "NONE"
+	},
+	"meshInfo" : 
+	{
+		"no_meshes" : 1,
+		"GlobalMesh" : 
+		{
+			"meshSummary" : 
+			{
+				"no_nodes" : 64,
+				"no_volume_elements" : 27,
+				"no_surface_elements" : 0,
+				"no_edgess" : 144
+			},
+			"nodesSummary" : 
+			{
+				"on_Bn=0_planes" : 0,
+				"on_Ht=0_planes" : 0,
+				"on_far_boundaries" : 56,
+				"on_periodic_faces" : 0,
+				"on_conductors" : 0,
+				"on_dielectric" : 64
+			},
+			"edgeSummary" : 
+			{
+				"on_Bn=0_planes" : 0,
+				"on_Ht=0_planes" : 0,
+				"on_far_boundaries" : 108,
+				"on_periodic_face" : 0,
+				"on_conductors" : 0,
+				"on_interface_of_potential_regions" : 0
+			},
+			"volumeElementSummary" : 
+			{
+				"HEXA_N8E12" : 27,
+				"in_conductors" : 0,
+				"in_magnetic_regions" : 0,
+				"in_non_linear_magnetic_regions" : 0,
+				"in_air_regions" : 0,
+				"in_total_potential_regions" : 0,
+				"in_reduced_potential_regions" : 27
+			},
+			"surfaceElementSummary" : 
+			{
+				"in_surface_conductors" : 0,
+				"in_surface_impedance_regions" : 0,
+				"in_surface_gap_regions" : 0
+			}
+		}
+	}
+}

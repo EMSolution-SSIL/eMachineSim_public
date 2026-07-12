@@ -1,0 +1,51 @@
+{
+	"metaData" : 
+	{
+		"type" : "EMSolution_PostData",
+		"version" : "1.0",
+		"EMSolutionVersion" : "2025.11.2",
+		"releaseDate" : "March 12, 2026",
+		"creationDate" : "Fri May  1 15:20:07 2026",
+		"comments" : "This file is converted from the EMSolution output data."
+	},
+	"analysisCondition" : 
+	{
+		"analysisType" : "ELECTRO_STATIC",
+		"nonlinear" : "LINEAR",
+		"motionType" : "NONE",
+		"circuitType" : "NONE"
+	},
+	"postDataList" : 
+	{
+		"numData" : 1,
+		"dataList" : [ "ELECTRICAL_POTENTIAL" ]
+	},
+	"timeStep" : 
+	{
+		"numSteps" : 1,
+		"stepNo" : [ 1 ],
+		"timeUnit" : "second",
+		"time" : [ 1.00000000000000002e-03 ]
+	},
+	"postData" : 
+	{
+		"electrostatic" : 
+		{
+			"electrostaticUnit" : [ "V", "C" ],
+			"numSources" : 2,
+			"sourceData" : 
+			[
+				{
+					"sourceID" : 1,
+					"potential" : [ 1.00000000000000000e+01 ],
+					"charge" : [ 2.65625634510020532e-10 ]
+				},
+				{
+					"sourceID" : 2,
+					"potential" : [ 0.00000000000000000e+00 ],
+					"charge" : [ -2.65625638525482479e-10 ]
+				}
+			]
+		}
+	}
+}

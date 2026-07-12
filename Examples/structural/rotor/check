@@ -1,0 +1,349 @@
+Working directory changed to public_repo\Examples\structural\rotor
+start program at Fri Jul 10 10:26:07 2026
+
+start readInputData
+* File input_rotor_2d_1500rpm_shaft_bc_no_contact.json start. *
+
+* File input_rotor_2d_1500rpm_shaft_bc_no_contact.json end * -4 cards are read.
+
+
+readInputData has been completed
+elapsed time was: 0.01 seconds
+start preprocessing
+preprocess: enter
+preprocess: mesh file = pre_geom.neu
+preprocess: reader created
+preprocess: initialize 2D surface element types
+preprocess: element type initialization completed
+preprocess: loadMesh start
+preprocess: loadMesh completed
+preprocess: mesh is valid
+preprocess: defineMesh start
+defineMesh completed.
+calculateElementMatrices completed.
+printMeshInfo completed.
+extractBoundaryFaces completed.
+Boundary face files written: 756 faces
+VTK mesh file written: mesh.vtk
+writeBoundaryFaces completed.
+post_geom.neu mesh export skipped for structural 2D FEMAP output.
+preprocessing has been completed
+elapsed time was: 0.12 seconds
+start makingSystemMatrices
+STRUCTURAL_2D_UNKNOWNS: enabled, UZ fixed automatically, plane_stress=1, thickness= 1.000000e+00
+defineUnknown completed: 830 unknowns
+setGlobalMatrixProfile completed: matrix_length=10045
+Starting assembleHmatrix...
+STRUCTURAL_2D_STIFFNESS: assembled surface elements=646, thickness= 1.000000e+00, mode=plane_stress
+Matrix assembled successfully, writing matrix outputs...
+Binary matrix written to system_matrices: dim=830, len=10045
+Binary RHS written to load_vector: dim=830
+MatrixMarket file written to matrix.mm: dim=830, nnz=9782
+MatrixMarket RHS written to RHS.mm: dim=830
+Matrix file write completed.
+makingSystemMatrices completed.
+makingSystemMatrices has been completed
+elapsed time was: 0.22 seconds
+start solvingEquations
+SolveLinearMatrixEquation: start, matrix_type=0
+SolveLinearMatrixEquation: loading binary matrix
+elapsed time was: 0.00 seconds
+SolveLinearMatrixEquation: matrix loaded dim=830 len=10045
+SolveLinearMatrixEquation: loading binary RHS
+elapsed time was: 0.00 seconds
+SolveLinearMatrixEquation: RHS loaded
+SolveLinearMatrixEquation: scaling start
+elapsed time was: 0.00 seconds
+SolveLinearMatrixEquation: scaling completed
+SolveLinearMatrixEquation: preconditioner start
+elapsed time was: 0.01 seconds
+SolveLinearMatrixEquation: preconditioner completed
+elapsed time was: 0.01 seconds
+SolveLinearMatrixEquation: solver start
+Iteration #1, Relative error = 1.011107e+00
+Iteration #2, Relative error = 1.370228e+00
+Iteration #3, Relative error = 2.932297e+00
+Iteration #4, Relative error = 3.082033e+00
+Iteration #5, Relative error = 4.022885e+00
+Iteration #6, Relative error = 5.120894e+00
+Iteration #7, Relative error = 5.234960e+00
+Iteration #8, Relative error = 5.151614e+00
+Iteration #9, Relative error = 5.502605e+00
+Iteration #10, Relative error = 6.101026e+00
+Iteration #11, Relative error = 5.829992e+00
+Iteration #12, Relative error = 5.860657e+00
+Iteration #13, Relative error = 6.165758e+00
+Iteration #14, Relative error = 7.674905e+00
+Iteration #15, Relative error = 7.551858e+00
+Iteration #16, Relative error = 7.700154e+00
+Iteration #17, Relative error = 8.639789e+00
+Iteration #18, Relative error = 9.368955e+00
+Iteration #19, Relative error = 9.620864e+00
+Iteration #20, Relative error = 1.049518e+01
+Iteration #21, Relative error = 9.925044e+00
+Iteration #22, Relative error = 9.780473e+00
+Iteration #23, Relative error = 1.048086e+01
+Iteration #24, Relative error = 1.019703e+01
+Iteration #25, Relative error = 1.012300e+01
+Iteration #26, Relative error = 1.066620e+01
+Iteration #27, Relative error = 1.082500e+01
+Iteration #28, Relative error = 9.727187e+00
+Iteration #29, Relative error = 9.546807e+00
+Iteration #30, Relative error = 9.468266e+00
+Iteration #31, Relative error = 8.988349e+00
+Iteration #32, Relative error = 7.971535e+00
+Iteration #33, Relative error = 8.022493e+00
+Iteration #34, Relative error = 8.169612e+00
+Iteration #35, Relative error = 7.999335e+00
+Iteration #36, Relative error = 7.927638e+00
+Iteration #37, Relative error = 7.272323e+00
+Iteration #38, Relative error = 6.758022e+00
+Iteration #39, Relative error = 6.179464e+00
+Iteration #40, Relative error = 5.954004e+00
+Iteration #41, Relative error = 5.730121e+00
+Iteration #42, Relative error = 5.604440e+00
+Iteration #43, Relative error = 5.108182e+00
+Iteration #44, Relative error = 4.657441e+00
+Iteration #45, Relative error = 4.199810e+00
+Iteration #46, Relative error = 3.747848e+00
+Iteration #47, Relative error = 3.483790e+00
+Iteration #48, Relative error = 3.650927e+00
+Iteration #49, Relative error = 3.792602e+00
+Iteration #50, Relative error = 3.773827e+00
+Iteration #51, Relative error = 4.244703e+00
+Iteration #52, Relative error = 4.731416e+00
+Iteration #53, Relative error = 4.713455e+00
+Iteration #54, Relative error = 4.465717e+00
+Iteration #55, Relative error = 3.960716e+00
+Iteration #56, Relative error = 4.101369e+00
+Iteration #57, Relative error = 3.413333e+00
+Iteration #58, Relative error = 3.219303e+00
+Iteration #59, Relative error = 2.665180e+00
+Iteration #60, Relative error = 2.243646e+00
+Iteration #61, Relative error = 2.117270e+00
+Iteration #62, Relative error = 2.111287e+00
+Iteration #63, Relative error = 2.249806e+00
+Iteration #64, Relative error = 2.084462e+00
+Iteration #65, Relative error = 2.040236e+00
+Iteration #66, Relative error = 1.612535e+00
+Iteration #67, Relative error = 1.664850e+00
+Iteration #68, Relative error = 1.519918e+00
+Iteration #69, Relative error = 1.517916e+00
+Iteration #70, Relative error = 1.421563e+00
+Iteration #71, Relative error = 1.502517e+00
+Iteration #72, Relative error = 1.402397e+00
+Iteration #73, Relative error = 1.115705e+00
+Iteration #74, Relative error = 8.925436e-01
+Iteration #75, Relative error = 8.902658e-01
+Iteration #76, Relative error = 8.754065e-01
+Iteration #77, Relative error = 7.907224e-01
+Iteration #78, Relative error = 7.010565e-01
+Iteration #79, Relative error = 6.639950e-01
+Iteration #80, Relative error = 7.166475e-01
+Iteration #81, Relative error = 6.327792e-01
+Iteration #82, Relative error = 6.313998e-01
+Iteration #83, Relative error = 5.775332e-01
+Iteration #84, Relative error = 5.923889e-01
+Iteration #85, Relative error = 5.573651e-01
+Iteration #86, Relative error = 6.089719e-01
+Iteration #87, Relative error = 6.775452e-01
+Iteration #88, Relative error = 6.787231e-01
+Iteration #89, Relative error = 7.749974e-01
+Iteration #90, Relative error = 8.606137e-01
+Iteration #91, Relative error = 9.250983e-01
+Iteration #92, Relative error = 8.956024e-01
+Iteration #93, Relative error = 1.035984e+00
+Iteration #94, Relative error = 9.045769e-01
+Iteration #95, Relative error = 8.933660e-01
+Iteration #96, Relative error = 9.097541e-01
+Iteration #97, Relative error = 8.926310e-01
+Iteration #98, Relative error = 7.885165e-01
+Iteration #99, Relative error = 7.993143e-01
+Iteration #100, Relative error = 6.872213e-01
+Iteration #101, Relative error = 5.879200e-01
+Iteration #102, Relative error = 6.003527e-01
+Iteration #103, Relative error = 5.360909e-01
+Iteration #104, Relative error = 4.879043e-01
+Iteration #105, Relative error = 5.082519e-01
+Iteration #106, Relative error = 4.760543e-01
+Iteration #107, Relative error = 4.500694e-01
+Iteration #108, Relative error = 4.452454e-01
+Iteration #109, Relative error = 4.370449e-01
+Iteration #110, Relative error = 4.104206e-01
+Iteration #111, Relative error = 4.114017e-01
+Iteration #112, Relative error = 4.436440e-01
+Iteration #113, Relative error = 4.706455e-01
+Iteration #114, Relative error = 4.888897e-01
+Iteration #115, Relative error = 4.891419e-01
+Iteration #116, Relative error = 4.540452e-01
+Iteration #117, Relative error = 5.028218e-01
+Iteration #118, Relative error = 4.829261e-01
+Iteration #119, Relative error = 4.934652e-01
+Iteration #120, Relative error = 5.183936e-01
+Iteration #121, Relative error = 5.233715e-01
+Iteration #122, Relative error = 5.162121e-01
+Iteration #123, Relative error = 4.799249e-01
+Iteration #124, Relative error = 4.245368e-01
+Iteration #125, Relative error = 3.774898e-01
+Iteration #126, Relative error = 3.270420e-01
+Iteration #127, Relative error = 3.527421e-01
+Iteration #128, Relative error = 3.235752e-01
+Iteration #129, Relative error = 3.265739e-01
+Iteration #130, Relative error = 3.451351e-01
+Iteration #131, Relative error = 3.251215e-01
+Iteration #132, Relative error = 3.266504e-01
+Iteration #133, Relative error = 3.281755e-01
+Iteration #134, Relative error = 3.545674e-01
+Iteration #135, Relative error = 3.560865e-01
+Iteration #136, Relative error = 4.057294e-01
+Iteration #137, Relative error = 4.441410e-01
+Iteration #138, Relative error = 4.503047e-01
+Iteration #139, Relative error = 5.007973e-01
+Iteration #140, Relative error = 6.420650e-01
+Iteration #141, Relative error = 6.254651e-01
+Iteration #142, Relative error = 6.891888e-01
+Iteration #143, Relative error = 6.348147e-01
+Iteration #144, Relative error = 6.339767e-01
+Iteration #145, Relative error = 6.021839e-01
+Iteration #146, Relative error = 6.560999e-01
+Iteration #147, Relative error = 6.967201e-01
+Iteration #148, Relative error = 6.883548e-01
+Iteration #149, Relative error = 8.186075e-01
+Iteration #150, Relative error = 9.219087e-01
+Iteration #151, Relative error = 9.889644e-01
+Iteration #152, Relative error = 9.263525e-01
+Iteration #153, Relative error = 9.491033e-01
+Iteration #154, Relative error = 1.081888e+00
+Iteration #155, Relative error = 1.082360e+00
+Iteration #156, Relative error = 1.107182e+00
+Iteration #157, Relative error = 1.291734e+00
+Iteration #158, Relative error = 1.353562e+00
+Iteration #159, Relative error = 1.511267e+00
+Iteration #160, Relative error = 1.488762e+00
+Iteration #161, Relative error = 1.602160e+00
+Iteration #162, Relative error = 1.613547e+00
+Iteration #163, Relative error = 1.552153e+00
+Iteration #164, Relative error = 1.342444e+00
+Iteration #165, Relative error = 1.050076e+00
+Iteration #166, Relative error = 1.020759e+00
+Iteration #167, Relative error = 1.091643e+00
+Iteration #168, Relative error = 1.085274e+00
+Iteration #169, Relative error = 9.498345e-01
+Iteration #170, Relative error = 9.169107e-01
+Iteration #171, Relative error = 7.719607e-01
+Iteration #172, Relative error = 6.897071e-01
+Iteration #173, Relative error = 5.445497e-01
+Iteration #174, Relative error = 4.071621e-01
+Iteration #175, Relative error = 4.051982e-01
+Iteration #176, Relative error = 3.054821e-01
+Iteration #177, Relative error = 2.369940e-01
+Iteration #178, Relative error = 2.241922e-01
+Iteration #179, Relative error = 2.035285e-01
+Iteration #180, Relative error = 1.906086e-01
+Iteration #181, Relative error = 1.901302e-01
+Iteration #182, Relative error = 1.649441e-01
+Iteration #183, Relative error = 1.752450e-01
+Iteration #184, Relative error = 1.612529e-01
+Iteration #185, Relative error = 1.606864e-01
+Iteration #186, Relative error = 1.462972e-01
+Iteration #187, Relative error = 1.432706e-01
+Iteration #188, Relative error = 1.418382e-01
+Iteration #189, Relative error = 1.338096e-01
+Iteration #190, Relative error = 1.371301e-01
+Iteration #191, Relative error = 1.480476e-01
+Iteration #192, Relative error = 1.340321e-01
+Iteration #193, Relative error = 1.320434e-01
+Iteration #194, Relative error = 1.246854e-01
+Iteration #195, Relative error = 1.225592e-01
+Iteration #196, Relative error = 1.201080e-01
+Iteration #197, Relative error = 1.027877e-01
+Iteration #198, Relative error = 9.735590e-02
+Iteration #199, Relative error = 9.467627e-02
+Iteration #200, Relative error = 1.098685e-01
+Iteration #201, Relative error = 1.077859e-01
+Iteration #202, Relative error = 1.063646e-01
+Iteration #203, Relative error = 9.339340e-02
+Iteration #204, Relative error = 8.623724e-02
+Iteration #205, Relative error = 7.018348e-02
+Iteration #206, Relative error = 4.697265e-02
+Iteration #207, Relative error = 4.323689e-02
+Iteration #208, Relative error = 3.792777e-02
+Iteration #209, Relative error = 3.743822e-02
+Iteration #210, Relative error = 3.565716e-02
+Iteration #211, Relative error = 3.560504e-02
+Iteration #212, Relative error = 3.461444e-02
+Iteration #213, Relative error = 3.094553e-02
+Iteration #214, Relative error = 3.025427e-02
+Iteration #215, Relative error = 2.895475e-02
+Iteration #216, Relative error = 2.656842e-02
+Iteration #217, Relative error = 2.331618e-02
+Iteration #218, Relative error = 2.177188e-02
+Iteration #219, Relative error = 1.754819e-02
+Iteration #220, Relative error = 1.290306e-02
+Iteration #221, Relative error = 1.286428e-02
+Iteration #222, Relative error = 1.258995e-02
+Iteration #223, Relative error = 1.142708e-02
+Iteration #224, Relative error = 9.127985e-03
+Iteration #225, Relative error = 7.876485e-03
+Iteration #226, Relative error = 6.521970e-03
+Iteration #227, Relative error = 5.999648e-03
+Iteration #228, Relative error = 5.461174e-03
+Iteration #229, Relative error = 4.355047e-03
+Iteration #230, Relative error = 3.926960e-03
+Iteration #231, Relative error = 3.602677e-03
+Iteration #232, Relative error = 3.284248e-03
+Iteration #233, Relative error = 3.066431e-03
+Iteration #234, Relative error = 2.717983e-03
+Iteration #235, Relative error = 2.550749e-03
+Iteration #236, Relative error = 1.949395e-03
+Iteration #237, Relative error = 1.664835e-03
+Iteration #238, Relative error = 1.323222e-03
+Iteration #239, Relative error = 1.087190e-03
+Iteration #240, Relative error = 1.057145e-03
+Iteration #241, Relative error = 1.014780e-03
+Iteration #242, Relative error = 8.479768e-04
+Iteration #243, Relative error = 7.989921e-04
+Iteration #244, Relative error = 8.029061e-04
+Iteration #245, Relative error = 6.733393e-04
+Iteration #246, Relative error = 5.541475e-04
+Iteration #247, Relative error = 5.518405e-04
+Iteration #248, Relative error = 5.305920e-04
+Iteration #249, Relative error = 4.393332e-04
+Iteration #250, Relative error = 3.074716e-04
+Iteration #251, Relative error = 2.210692e-04
+Iteration #252, Relative error = 1.910044e-04
+Iteration #253, Relative error = 1.684068e-04
+Iteration #254, Relative error = 1.679054e-04
+Iteration #255, Relative error = 1.451976e-04
+Iteration #256, Relative error = 1.006741e-04
+Iteration #257, Relative error = 8.887512e-05
+Iteration #258, Relative error = 6.430007e-05
+Iteration #259, Relative error = 4.526555e-05
+Iteration #260, Relative error = 4.548692e-05
+Iteration #261, Relative error = 3.345168e-05
+Iteration #262, Relative error = 2.997935e-05
+Iteration #263, Relative error = 2.258724e-05
+Iteration #264, Relative error = 1.655591e-05
+Iteration #265, Relative error = 1.161063e-05
+Iteration #266, Relative error = 8.041013e-06
+Iteration #267, Relative error = 8.096049e-06
+Iteration #268, Relative error = 5.866976e-06
+Iteration #269, Relative error = 4.278483e-06
+Iteration #270, Relative error = 3.060222e-06
+Iteration #271, Relative error = 1.943548e-06
+Iteration #272, Relative error = 1.782822e-06
+Iteration #273, Relative error = 1.741700e-06
+Iteration #274, Relative error = 1.295730e-06
+Iteration #275, Relative error = 8.356061e-07
+SolveLinearMatrixEquation: solver completed
+elapsed time was: 0.04 seconds
+SolveLinearMatrixEquation: postcondition completed
+solvingEquations has been completed
+elapsed time was: 0.29 seconds
+start postprocessing
+StructuralPostProcessor: resolved 431 node displacements, 646 element stresses
+Structural load balance written: structural_load_balance.csv, total=( 1.156290e+03, 1.168298e+03, 0.000000e+00), reaction_estimate=(-1.156290e+03,-1.168298e+03,-0.000000e+00), fixed_dofs=63
+Post data written: structural_displacement.vtk
+Post data written: displacement.neu
+postprocessing has been completed
+elapsed time was: 0.36 seconds

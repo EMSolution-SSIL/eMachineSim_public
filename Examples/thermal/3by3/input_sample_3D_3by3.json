@@ -1,0 +1,709 @@
+{
+    "metaData":  {
+                     "type" : "eMachineSimInput",
+		             "eMachineSimVersion" : "0.1.0",
+                     "comments":  "This file is converted from the EMSolution input data."
+                 },
+    "1_Execution_Control":  {
+                                "PRE_PROCESSING":  1,
+                                "MAKE_SYSTEM_MATRICES":  1,
+                                "SOLVE_EQUATION":  1,
+                                "POST_PROCESSING":  1
+                            },
+    "2_Analysis_Type":  {
+                            "STATIC":  1,
+                            "AC":  0,
+                            "DOF_PER_NODE":  3,
+                            "ANALYSIS_TYPE":  "THERMAL_ANALYSIS"
+                        },
+    "3_Potential_Gauge_Conditions":  {
+                                         "RENUMBERING":  0,
+                                         "SCALING":  0,
+                                         "LINE_SEARCH":  0,
+                                         "MATRIX_ASYMMETRICITY":  0
+                                     },
+    "4_Shape_Function_Order_Added_Features":  {
+                                                  "NODE_ORDER":  1,
+                                                  "QUAD_TRI":  0,
+                                                  "PARALLEL_NO":  0,
+                                                  "PARALLEL_OPTION":  0
+                                              },
+    "5_Convergence_Conditions":  {
+                                     "ICCG_CONV":  1E-06,
+                                     "ACCEL_FACTOR":  1.02,
+                                     "DIV_FACTOR":  10,
+                                     "DIV_ITERATIONS":  10,
+                                     "SOLVER":  0,
+                                     "THETA":  0.6666667,
+                                     "MAX_ITERATIONS":  0,
+                                     "5_2_Nonlinear_Convergence_Condition":  {
+                                                                                 "NON_LINEAR_CONV":  0.001,
+                                                                                 "RELAXATION":  1,
+                                                                                 "NO_ITERATIONS":  20,
+                                                                                 "INIT_OPTION":  0,
+                                                                                 "ICCG_CONV_RATIO":  0.001,
+                                                                                 "CHECK_B":  1,
+                                                                                 "NON_LINEAR_METHOD":  0
+                                                                             }
+                                 },
+    "6_Gaussian_Integral_Point":  {
+                                      "POINTS_IN_1D":  3,
+                                      "POINT_IN_TRIANGLE":  7,
+                                      "MAT_POINTS":  1
+                                  },
+    "7_Initial_Conditions":  {
+                                 "INITIAL_STEP":  -1,
+                                 "DATA_TYPE":  0,
+                                 "INITIAL_PHASE":  0,
+                                 "MULTI":  0,
+                                 "OUTPUT_STEP_NO":  0
+                             },
+    "8_Calculation_Step":  {
+                               "NO_STEPS":  [
+                                                1
+                                            ],
+                               "DELTA_TIME":  [
+                                                  0.001
+                                              ],
+                               "INITIAL_TIME":  0
+                           },
+    "9_Output_Step":  {
+                          "TIME_DIFF":  3,
+                          "RESTART_FILE_OPTION":  0,
+                          "ALL_STEP_OUTPUT":  0,
+                          "OUTPUT_STEP_SET":  [
+                                                  [
+                                                      1,
+                                                      1,
+                                                      1
+                                                  ]
+                                              ]
+                      },
+    "10_1_Input_Files":  {
+                             "INPUT_MESH_FILE":  5,
+                             "UNIT":  0,
+                             "NO_MESH":  0,
+                             "MESHLESS":  0
+                         },
+    "10_2_Output_Files":  {
+                              "POST_DATA_FILE":  5,
+                              "ELEM_OUT":  1,
+                              "NODE_OUT":  1,
+                              "AVERAGE":  0,
+                              "WIDE":  0
+                          },
+    "10_3_Post_Files":  {
+                            "MESH":  1,
+                            "ELECTRIC":  1
+                        },
+    "11_Print_Output":  {
+                            "CURRENT":  0
+                        },
+    "12_Geometry":  {
+                        "GEOMETRY":  0,
+                        "DELTA_Z_THETA":  1
+                    },
+    "13_Boundary_Conditions":  {
+                                   "FAR_BOUNDARY_CONDITION":  0,
+                                   "PHI_BOUNDARY_CONDITION":  0,
+                                   "DISTANCE_JUDGE":  0.001,
+                                   "STRUCTURAL_DISPLACEMENT_BC":  [
+                                                                      {
+                                                                          "NODE_ID":  1,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  1,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  2,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  3,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  4,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  5,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  6,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  7,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  25,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  26,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  27,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  28,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  29,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  30,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  31,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  267,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  268,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  269,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  270,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  271,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  272,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  273,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  291,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  292,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  293,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  294,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  295,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  296,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  297,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  400,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  401,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  402,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  403,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  404,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  405,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  406,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  424,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  425,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  426,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  427,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  428,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  429,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  430,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  533,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  534,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  535,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  536,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  537,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  538,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  539,
+                                                                          "FIX_UX":  1,
+                                                                          "FIX_UY":  0,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  557,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  558,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  559,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  560,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  561,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  562,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      },
+                                                                      {
+                                                                          "NODE_ID":  563,
+                                                                          "FIX_UX":  0,
+                                                                          "FIX_UY":  1,
+                                                                          "FIX_UZ":  0,
+                                                                          "UX":  0,
+                                                                          "UY":  0,
+                                                                          "UZ":  0
+                                                                      }
+                                                                  ],
+                                   "STRUCTURAL_NODAL_LOADS":  [
+
+                                                              ],
+                                   "CENTRIFUGAL_LOAD":  {
+                                                            "ENABLED":  1,
+                                                            "OMEGA":  [
+                                                                          0,
+                                                                          0,
+                                                                          100
+                                                                      ],
+                                                            "AXIS_POINT":  [
+                                                                               0,
+                                                                               0,
+                                                                               0
+                                                                           ]
+                                                        }
+                               },
+    "16_Material_Properties":  {
+                                   "EXTEND_TOTAL_for_COIL":  0,
+                                   "16_1_3D_Element_Properties":  [
+                                                                      {
+                                                                          "MAT_ID":  1,
+                                                                          "ElasticProperty":  {
+                                                                                                  "E":  210000000000,
+                                                                                                  "nu":  0.3,
+                                                                                                  "rho":  7800
+                                                                                              },
+                                                                          "ElectricProperty":  {
+                                                                                                   "permittivity":  {
+                                                                                                                        "comment":  "EPS_XYZ for anisotropic, or isotropic EPS if not defined.",
+                                                                                                                        "EPS":  1.0
+                                                                                                                    },
+                                                                                                   "conductivity":  {
+                                                                                                                        "comment":  "SIGMA_XYZ for anisotropic, or isotropic SIGMA if not defined.",
+                                                                                                                        "SIGMA":  0
+                                                                                                                    }
+                                                                                               },
+                                                                          "ThermalProperty":  {
+                                                                                                  "CONDUCTIVITY":  45
+                                                                                              }
+                                                                      }
+                                                                  ]
+                               },
+    "17_Field_Source":  [
+                            {
+                                "EPOTSUF":  {
+                                                "SERIES_ID":  1,
+                                                "SMAT_ID":  2,
+                                                "POT_OR_CHARGE":  1,
+                                                "TIME_ID":  1,
+                                                "UNIT_TYPE":  0
+                                            }
+                            },
+                            {
+                                "EPOTSUF":  {
+                                                "SERIES_ID":  2,
+                                                "SMAT_ID":  3,
+                                                "POT_OR_CHARGE":  1,
+                                                "TIME_ID":  2,
+                                                "UNIT_TYPE":  0
+                                            }
+                            }
+                        ],
+    "18_Time_Function":  [
+                             {
+                                 "TIME_ID":  1,
+                                 "OPTION":  0,
+                                 "C0":  10,
+                                 "C1":  0,
+                                 "C2":  0,
+                                 "C3":  0,
+                                 "C4":  0,
+                                 "C5":  0,
+                                 "C6":  0,
+                                 "TEXP":  0,
+                                 "TCYCLE":  0,
+                                 "PHASE4":  0
+                             },
+                             {
+                                 "TIME_ID":  2,
+                                 "OPTION":  0,
+                                 "C0":  0,
+                                 "C1":  0,
+                                 "C2":  0,
+                                 "C3":  0,
+                                 "C4":  0,
+                                 "C5":  0,
+                                 "C6":  0,
+                                 "TEXP":  0,
+                                 "TCYCLE":  0,
+                                 "PHASE4":  0
+                             }
+                         ]
+}

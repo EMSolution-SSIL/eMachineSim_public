@@ -1,0 +1,116 @@
+{
+  "metaData": {
+    "type" : "eMachineSimInput",
+		"eMachineSimVersion" : "0.1.0",
+    "comments": "Minimal CHEXA + PSOLID/MAT4 diagnostic BDF sample. JSON material data is still used for analysis by default; JSON k intentionally differs from BDF MAT4.k."
+  },
+  "1_Execution_Control": {
+    "PRE_PROCESSING": 1,
+    "MAKE_SYSTEM_MATRICES": 1,
+    "SOLVE_EQUATION": 1,
+    "POST_PROCESSING": 1
+  },
+  "2_Analysis_Type": {
+    "STATIC": 1,
+    "AC": 0,
+    "DOF_PER_NODE": 3,
+    "ANALYSIS_TYPE": "THERMAL_ANALYSIS"
+  },
+  "3_Potential_Gauge_Conditions": {
+    "RENUMBERING": 0,
+    "SCALING": 0,
+    "LINE_SEARCH": 0,
+    "MATRIX_ASYMMETRICITY": 0
+  },
+  "5_Convergence_Conditions": {
+    "ICCG_CONV": 1.0e-8,
+    "ACCEL_FACTOR": 1.02,
+    "DIV_FACTOR": 10,
+    "DIV_ITERATIONS": 10,
+    "SOLVER": 0,
+    "MAX_ITERATIONS": 1000
+  },
+  "6_Gaussian_Integral_Point": {
+    "POINTS_IN_1D": 2,
+    "POINT_IN_TRIANGLE": 3,
+    "MAT_POINTS": 1
+  },
+  "mesh": {
+    "format": "nastran_bdf",
+    "file": "min_hexa_psolid_mat4_qvol.bdf"
+  },
+  "bdf_import": {
+    "property_to_material": {
+      "10": 100
+    },
+    "property_to_region": {
+      "10": 10
+    },
+    "qvol_enabled": true
+  },
+  "10_2_Output_Files": {
+    "POST_DATA_FILE": "ATLAS",
+    "ELEM_OUT": 1,
+    "NODE_OUT": 1,
+    "AVERAGE": 0,
+    "WIDE": 0
+  },
+  "13_Boundary_Conditions": {
+    "FAR_BOUNDARY_CONDITION": 0,
+    "PHI_BOUNDARY_CONDITION": 0,
+    "DISTANCE_JUDGE": 0.001
+  },
+  "16_Material_Properties": {
+    "16_1_3D_Element_Properties": [
+      {
+        "MAT_ID": 100,
+        "ThermalProperty": {
+          "CONDUCTIVITY": 10.0
+        },
+        "ElectricProperty": {
+          "permittivity": {
+            "EPS": 1.0
+          },
+          "conductivity": {
+            "SIGMA": 0.0
+          }
+        },
+        "ElasticProperty": {
+          "E": 1.0,
+          "nu": 0.3,
+          "rho": 1.0
+        }
+      }
+    ]
+  },
+  "thermal_network": {
+    "auto_surface_groups": [
+      {
+        "name": "all_external_bdf",
+        "type": "external"
+      }
+    ],
+    "elements": [
+      {
+        "type": "FEMH",
+        "name": "port_all_external_bdf",
+        "surface": "all_external_bdf",
+        "node": "shield",
+        "h": 10.0
+      },
+      {
+        "type": "RTH",
+        "name": "r_shield_ambient",
+        "node1": "shield",
+        "node2": "ambient",
+        "value": 0.5
+      },
+      {
+        "type": "TEMP",
+        "name": "ambient_temp",
+        "node": "ambient",
+        "temperature": 0.0
+      }
+    ]
+  }
+}

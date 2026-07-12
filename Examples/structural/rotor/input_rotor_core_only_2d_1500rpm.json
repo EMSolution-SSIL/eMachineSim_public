@@ -1,0 +1,378 @@
+{
+  "metaData": {
+    "type" : "eMachineSimInput",
+		"eMachineSimVersion" : "0.1.0",
+    "comments": "2D structural rotor core-only centrifugal test"
+  },
+  "1_Execution_Control": {
+    "PRE_PROCESSING": 1,
+    "MAKE_SYSTEM_MATRICES": 1,
+    "SOLVE_EQUATION": 1,
+    "POST_PROCESSING": 1
+  },
+  "2_Analysis_Type": {
+    "STATIC": 1,
+    "AC": 0,
+    "DOF_PER_NODE": 3,
+    "ANALYSIS_TYPE": "STRUCTURAL_STATIC"
+  },
+  "3_Potential_Gauge_Conditions": {
+    "RENUMBERING": 0,
+    "SCALING": 0,
+    "LINE_SEARCH": 0,
+    "MATRIX_ASYMMETRICITY": 0
+  },
+  "4_Shape_Function_Order_Added_Features": {
+    "NODE_ORDER": 1,
+    "QUAD_TRI": 0,
+    "PARALLEL_NO": 0,
+    "PARALLEL_OPTION": 0
+  },
+  "5_Convergence_Conditions": {
+    "ICCG_CONV": 1e-6,
+    "ACCEL_FACTOR": 1.02,
+    "DIV_FACTOR": 10,
+    "DIV_ITERATIONS": 10,
+    "SOLVER": 0,
+    "THETA": 0.6666667,
+    "MAX_ITERATIONS": 2000
+  },
+  "6_Gaussian_Integral_Point": {
+    "POINTS_IN_1D": 3,
+    "POINT_IN_TRIANGLE": 7,
+    "MAT_POINTS": 1
+  },
+  "7_Initial_Conditions": {
+    "INITIAL_STEP": -1,
+    "DATA_TYPE": 0,
+    "INITIAL_PHASE": 0,
+    "MULTI": 0,
+    "OUTPUT_STEP_NO": 0
+  },
+  "8_Calculation_Step": {
+    "NO_STEPS": [1],
+    "DELTA_TIME": [0.001],
+    "INITIAL_TIME": 0
+  },
+  "9_Output_Step": {
+    "TIME_DIFF": 3,
+    "RESTART_FILE_OPTION": 0,
+    "ALL_STEP_OUTPUT": 0,
+    "OUTPUT_STEP_SET": [[1, 1, 1]]
+  },
+  "10_1_Input_Files": {
+    "INPUT_MESH_FILE": 5,
+    "UNIT": 0,
+    "NO_MESH": 0,
+    "MESHLESS": 0
+  },
+  "10_2_Output_Files": {
+    "POST_DATA_FILE": 5,
+    "ELEM_OUT": 1,
+    "NODE_OUT": 1,
+    "AVERAGE": 0,
+    "WIDE": 0
+  },
+  "10_3_Post_Files": {
+    "MESH": 1,
+    "ELECTRIC": 0
+  },
+  "11_Print_Output": {
+    "CURRENT": 0
+  },
+  "12_Geometry": {
+    "GEOMETRY": 0,
+    "DELTA_Z_THETA": 1.0
+  },
+  "13_Boundary_Conditions": {
+    "FAR_BOUNDARY_CONDITION": 0,
+    "PHI_BOUNDARY_CONDITION": 0,
+    "DISTANCE_JUDGE": 1e-4,
+    "STRUCTURAL_2D": {
+      "ENABLED": 1,
+      "MODE": "PLANE_STRESS",
+      "THICKNESS": 1.0
+    },
+    "STRUCTURAL_DISPLACEMENT_BC": [
+      {
+        "NODE_ID": 10,
+        "FIX_UX": 1,
+        "FIX_UY": 0,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 15,
+        "FIX_UX": 1,
+        "FIX_UY": 0,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 20,
+        "FIX_UX": 1,
+        "FIX_UY": 0,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 25,
+        "FIX_UX": 1,
+        "FIX_UY": 0,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 35,
+        "FIX_UX": 1,
+        "FIX_UY": 0,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 45,
+        "FIX_UX": 1,
+        "FIX_UY": 0,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 57,
+        "FIX_UX": 1,
+        "FIX_UY": 0,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 70,
+        "FIX_UX": 1,
+        "FIX_UY": 0,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 88,
+        "FIX_UX": 1,
+        "FIX_UY": 0,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 117,
+        "FIX_UX": 1,
+        "FIX_UY": 0,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 129,
+        "FIX_UX": 1,
+        "FIX_UY": 0,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 149,
+        "FIX_UX": 1,
+        "FIX_UY": 0,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 164,
+        "FIX_UX": 1,
+        "FIX_UY": 0,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 12,
+        "FIX_UX": 1,
+        "FIX_UY": 1,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 13,
+        "FIX_UX": 1,
+        "FIX_UY": 1,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 11,
+        "FIX_UX": 0,
+        "FIX_UY": 1,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 1681,
+        "FIX_UX": 0,
+        "FIX_UY": 1,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 1687,
+        "FIX_UX": 0,
+        "FIX_UY": 1,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 1691,
+        "FIX_UX": 0,
+        "FIX_UY": 1,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 1702,
+        "FIX_UX": 0,
+        "FIX_UY": 1,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 1713,
+        "FIX_UX": 0,
+        "FIX_UY": 1,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 1724,
+        "FIX_UX": 0,
+        "FIX_UY": 1,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 1736,
+        "FIX_UX": 0,
+        "FIX_UY": 1,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 1753,
+        "FIX_UX": 0,
+        "FIX_UY": 1,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 1782,
+        "FIX_UX": 0,
+        "FIX_UY": 1,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 1794,
+        "FIX_UX": 0,
+        "FIX_UY": 1,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 1812,
+        "FIX_UX": 0,
+        "FIX_UY": 1,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      },
+      {
+        "NODE_ID": 1827,
+        "FIX_UX": 0,
+        "FIX_UY": 1,
+        "FIX_UZ": 1,
+        "UX": 0.0,
+        "UY": 0.0,
+        "UZ": 0.0
+      }
+    ],
+    "CENTRIFUGAL_LOAD": {
+      "ENABLED": 1,
+      "OMEGA": [0.0, 0.0, 157.079632679],
+      "AXIS_POINT": [0.0, 0.0, 0.0]
+    }
+  },
+  "16_Material_Properties": {
+    "16_1_3D_Element_Properties": [
+      {
+        "MAT_ID": 2,
+        "ElasticProperty": {
+          "E": 2.05e11,
+          "nu": 0.3,
+          "rho": 7800.0
+        }
+      },
+      {
+        "MAT_ID": 17,
+        "ElasticProperty": {
+          "E": 2.05e11,
+          "nu": 0.3,
+          "rho": 7800.0
+        }
+      }
+    ]
+  },
+  "17_Field_Source": [],
+  "18_Time_Function": []
+}

@@ -1,0 +1,17 @@
+$ Minimal two-section CTETRA + QVOL BDF sample for bulk-section diagnostics
+BEGIN BULK
+GRID,1,,0.0,0.0,0.0
+GRID,2,,1.0,0.0,0.0
+GRID,3,,0.0,1.0,0.0
+GRID,4,,0.0,0.0,1.0
+CTETRA,1,1,1,2,3,4
+QVOL,1,60.0,1
+BEGIN BULK
+GRID,11,,2.0,0.0,0.0
+GRID,12,,3.0,0.0,0.0
+GRID,13,,2.0,1.0,0.0
+GRID,14,,2.0,0.0,1.0
+CTETRA,2,2,11,12,13,14
+QVOL*,1,120.0
+*,2
+ENDDATA
