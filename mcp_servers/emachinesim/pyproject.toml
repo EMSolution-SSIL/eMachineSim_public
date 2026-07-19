@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emachinesim-mcp"
+version = "0.2.0"
+description = "MCP server for eMachineSim input diagnostics, guarded JSON writing, and Python API based single-case solves"
+requires-python = ">=3.10"
+dependencies = [
+  "mcp>=1.0.0",
+]
+
+[project.scripts]
+emachinesim-mcp = "emachinesim_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["emachinesim_mcp*"]
