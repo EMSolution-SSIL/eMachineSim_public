@@ -1,6 +1,11 @@
 # Thermal Motor and BDF Workflow
 
-Use this reference for BDF/QVOL thermal analysis, motor steady thermal samples, FEMH thermal-network coupling, and gap/surface thermal couplings.
+Use this reference for BDF/QVOL thermal analysis, motor steady thermal samples,
+FEMH thermal-network coupling, and gap/surface thermal couplings.
+
+For detailed thermal equivalent-circuit, shared-node interface resistance,
+axial end-space cooling, and diagnostic order, also read
+`thermal-coupled-analysis.md`.
 
 Important sample locations:
 
@@ -52,5 +57,7 @@ Known limitations:
 - No transient thermal analysis.
 - No radiation model.
 - No temperature-dependent material or current-resistance iteration.
+- No automatic coil-end geometry or automatic coil-end loss distribution.
+- No CFD coolant or refrigerant flow solver.
 - No mortar/projection for nonmatching surface meshes.
 - BDF support is intentionally limited to the thermal workflow needs.

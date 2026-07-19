@@ -22,7 +22,7 @@ This Documentation and SKILLS License governs the documentation and skill materi
 This license covers:
 
 - `eMachineSimDocs/` documentation content, including Docusaurus Markdown/MDX content;
-- `SKILLS/` materials, including `SKILL.md` and reference files;
+- `skills/` materials, including `SKILL.md` and reference files;
 - repository README and explanatory Markdown files;
 - documentation text included in related public support materials.
 
@@ -78,3 +78,4 @@ This draft is intended to be interpreted under the laws of Japan, without regard
 ## 11. Conflicts
 
 If this license conflicts with a separately executed agreement between SSIL and an Authorized User, the separately executed agreement controls for that Authorized User to the extent of the conflict.
+

@@ -41,6 +41,7 @@
   },
   "bdf_import": {
     "material_source": "json",
+    "exclude_property_ids": [50],
     "bulk_sections": {
       "0": "stator",
       "1": "rotor"

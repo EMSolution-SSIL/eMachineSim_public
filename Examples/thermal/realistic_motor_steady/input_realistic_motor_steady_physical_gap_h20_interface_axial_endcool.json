@@ -1,0 +1,448 @@
+{
+  "metaData": {
+    "type": "eMachineSimInput",
+    "eMachineSimVersion": "0.1.0",
+    "comments": "Realistic motor steady sample: interface resistance plus axial end-space cooling trial."
+  },
+  "1_Execution_Control": {
+    "PRE_PROCESSING": 1,
+    "MAKE_SYSTEM_MATRICES": 1,
+    "SOLVE_EQUATION": 1,
+    "POST_PROCESSING": 1
+  },
+  "2_Analysis_Type": {
+    "STATIC": 1,
+    "AC": 0,
+    "DOF_PER_NODE": 3,
+    "ANALYSIS_TYPE": "THERMAL_ANALYSIS"
+  },
+  "3_Potential_Gauge_Conditions": {
+    "RENUMBERING": 0,
+    "SCALING": 0,
+    "LINE_SEARCH": 0,
+    "MATRIX_ASYMMETRICITY": 0
+  },
+  "5_Convergence_Conditions": {
+    "ICCG_CONV": 1e-08,
+    "ACCEL_FACTOR": 1.02,
+    "DIV_FACTOR": 10,
+    "DIV_ITERATIONS": 10,
+    "SOLVER": 0,
+    "MAX_ITERATIONS": 2000
+  },
+  "6_Gaussian_Integral_Point": {
+    "POINTS_IN_1D": 2,
+    "POINT_IN_TRIANGLE": 1,
+    "MAT_POINTS": 1
+  },
+  "mesh": {
+    "format": "nastran_bdf",
+    "file": "../QVOL_loss_mix.bdf"
+  },
+  "bdf_import": {
+    "material_source": "json",
+    "exclude_property_ids": [
+      50
+    ],
+    "bulk_sections": {
+      "0": "stator",
+      "1": "rotor"
+    },
+    "property_to_material": {
+      "10": 10,
+      "20": 20,
+      "30": 30,
+      "40": 40,
+      "41": 41,
+      "50": 50,
+      "10000": 10000,
+      "10001": 10001,
+      "10002": 10002,
+      "10003": 10003,
+      "10004": 10004,
+      "10005": 10005,
+      "50000": 50000,
+      "600000": 600000
+    },
+    "property_to_region": {
+      "10": 10,
+      "20": 20,
+      "30": 30,
+      "40": 40,
+      "41": 41,
+      "50": 50,
+      "10000": 10000,
+      "10001": 10001,
+      "10002": 10002,
+      "10003": 10003,
+      "10004": 10004,
+      "10005": 10005,
+      "50000": 50000,
+      "600000": 600000
+    },
+    "qvol_enabled": true
+  },
+  "thermal_volume_heat_sources": [
+    {
+      "name": "coil_copper_loss",
+      "mode": "coil_copper_loss",
+      "current_waveform": "sinusoidal_rms",
+      "frequency": 50.0,
+      "phases": [
+        {
+          "name": "U",
+          "property_ids": [
+            10000,
+            10001
+          ],
+          "current_rms": 3.0,
+          "phase_resistance": 0.852
+        },
+        {
+          "name": "V",
+          "property_ids": [
+            10004,
+            10005
+          ],
+          "current_rms": 3.0,
+          "phase_resistance": 0.852
+        },
+        {
+          "name": "W",
+          "property_ids": [
+            10002,
+            10003
+          ],
+          "current_rms": 3.0,
+          "phase_resistance": 0.852
+        }
+      ],
+      "turns_per_slot": 35,
+      "slots": 24,
+      "poles": 4,
+      "modeled_length_ratio": 1.0,
+      "coil_fill_factor": 0.35,
+      "distribution": "uniform_by_target_volume"
+    },
+    {
+      "name": "pm_magnet_loss",
+      "mode": "total_heat",
+      "target": {
+        "property_ids": [
+          50000
+        ]
+      },
+      "total_heat": 5.0,
+      "modeled_fraction": 0.25,
+      "distribution": "uniform_by_target_volume"
+    }
+  ],
+  "10_2_Output_Files": {
+    "POST_DATA_FILE": "ATLAS",
+    "ELEM_OUT": 1,
+    "NODE_OUT": 1,
+    "AVERAGE": 0,
+    "WIDE": 0
+  },
+  "13_Boundary_Conditions": {
+    "FAR_BOUNDARY_CONDITION": 0,
+    "PHI_BOUNDARY_CONDITION": 0,
+    "DISTANCE_JUDGE": 0.001
+  },
+  "16_Material_Properties": {
+    "16_1_3D_Element_Properties": [
+      {
+        "MAT_ID": 10,
+        "ThermalProperty": {
+          "CONDUCTIVITY": 10.0
+        }
+      },
+      {
+        "MAT_ID": 20,
+        "ThermalProperty": {
+          "CONDUCTIVITY": 10.0
+        }
+      },
+      {
+        "MAT_ID": 30,
+        "ThermalProperty": {
+          "CONDUCTIVITY": 10.0
+        }
+      },
+      {
+        "MAT_ID": 40,
+        "ThermalProperty": {
+          "CONDUCTIVITY": 10.0
+        }
+      },
+      {
+        "MAT_ID": 41,
+        "ThermalProperty": {
+          "CONDUCTIVITY": 10.0
+        }
+      },
+      {
+        "MAT_ID": 50,
+        "ThermalProperty": {
+          "CONDUCTIVITY": 10.0
+        }
+      },
+      {
+        "MAT_ID": 10000,
+        "ThermalProperty": {
+          "CONDUCTIVITY": 10.0
+        }
+      },
+      {
+        "MAT_ID": 10001,
+        "ThermalProperty": {
+          "CONDUCTIVITY": 10.0
+        }
+      },
+      {
+        "MAT_ID": 10002,
+        "ThermalProperty": {
+          "CONDUCTIVITY": 10.0
+        }
+      },
+      {
+        "MAT_ID": 10003,
+        "ThermalProperty": {
+          "CONDUCTIVITY": 10.0
+        }
+      },
+      {
+        "MAT_ID": 10004,
+        "ThermalProperty": {
+          "CONDUCTIVITY": 10.0
+        }
+      },
+      {
+        "MAT_ID": 10005,
+        "ThermalProperty": {
+          "CONDUCTIVITY": 10.0
+        }
+      },
+      {
+        "MAT_ID": 50000,
+        "ThermalProperty": {
+          "CONDUCTIVITY": 10.0
+        }
+      },
+      {
+        "MAT_ID": 600000,
+        "ThermalProperty": {
+          "CONDUCTIVITY": 10.0
+        }
+      }
+    ]
+  },
+  "thermal_network": {
+    "auto_surface_groups": [
+      {
+        "name": "all_external",
+        "type": "external"
+      },
+      {
+        "name": "stator_external",
+        "type": "bulk_external",
+        "bulk_section": "stator"
+      },
+      {
+        "name": "rotor_external",
+        "type": "bulk_external",
+        "bulk_section": "rotor"
+      },
+      {
+        "name": "stator_gap_candidate_filtered",
+        "type": "bulk_external",
+        "bulk_section": "stator",
+        "radius_min": 0.027,
+        "radius_max": 0.04,
+        "face_class": "radial_like",
+        "abs_normal_z_max": 0.3,
+        "abs_normal_radial_min": 0.7,
+        "normal_radial_max": -0.5
+      },
+      {
+        "name": "rotor_gap_candidate_filtered",
+        "type": "bulk_external",
+        "bulk_section": "rotor",
+        "radius_min": 0.02,
+        "radius_max": 0.0285,
+        "face_class": "radial_like",
+        "abs_normal_z_max": 0.3,
+        "abs_normal_radial_min": 0.7,
+        "normal_radial_min": 0.5
+      },
+      {
+        "name": "stator_end_faces",
+        "type": "bulk_external",
+        "bulk_section": "stator",
+        "abs_normal_z_min": 0.9
+      },
+      {
+        "name": "rotor_end_faces",
+        "type": "bulk_external",
+        "bulk_section": "rotor",
+        "abs_normal_z_min": 0.9
+      },
+      {
+        "name": "stator_radial_external_cooling",
+        "type": "surface_difference",
+        "base": "stator_external",
+        "exclude_surfaces": [
+          "stator_gap_candidate_filtered",
+          "stator_end_faces"
+        ]
+      },
+      {
+        "name": "rotor_radial_external_cooling",
+        "type": "surface_difference",
+        "base": "rotor_external",
+        "exclude_surfaces": [
+          "rotor_gap_candidate_filtered",
+          "rotor_end_faces"
+        ]
+      }
+    ],
+    "gap_pairing_diagnostics": [
+      {
+        "name": "main_airgap_filtered",
+        "source_surface": "stator_gap_candidate_filtered",
+        "target_surface": "rotor_gap_candidate_filtered",
+        "coordinate_system": "cylindrical_z",
+        "max_gap_distance": 0.02,
+        "max_theta_distance": 0.02,
+        "max_z_distance": 1e-06,
+        "require_opposite_normals": true,
+        "normal_dot_max": -0.5,
+        "thermal_diagnostic": {
+          "enabled": true,
+          "mode": "h",
+          "h": 20.0
+        }
+      }
+    ],
+    "gap_thermal_couplings": [
+      {
+        "name": "main_airgap_coupling",
+        "pairing": "main_airgap_filtered",
+        "enabled": true,
+        "mode": "h",
+        "h": 20.0,
+        "assembly": "node_pair_lumped",
+        "node_match_tolerance": 1e-09
+      }
+    ],
+    "elements": [
+      {
+        "type": "FEMH",
+        "name": "port_stator_radial_to_housing",
+        "surface": "stator_radial_external_cooling",
+        "node": "housing",
+        "h": 35.0
+      },
+      {
+        "type": "FEMH",
+        "name": "port_rotor_radial_to_shaft",
+        "surface": "rotor_radial_external_cooling",
+        "node": "shaft",
+        "h": 25.0
+      },
+      {
+        "type": "RTH",
+        "name": "r_housing_ambient",
+        "node1": "housing",
+        "node2": "ambient",
+        "value": 0.35
+      },
+      {
+        "type": "RTH",
+        "name": "r_shaft_ambient",
+        "node1": "shaft",
+        "node2": "ambient",
+        "value": 0.8
+      },
+      {
+        "type": "FEMH",
+        "name": "port_stator_end_to_end_space",
+        "surface": "stator_end_faces",
+        "node": "end_space_air",
+        "h": 80.0
+      },
+      {
+        "type": "FEMH",
+        "name": "port_rotor_end_to_end_space",
+        "surface": "rotor_end_faces",
+        "node": "end_space_air",
+        "h": 50.0
+      },
+      {
+        "type": "RTH",
+        "name": "r_end_space_housing",
+        "node1": "end_space_air",
+        "node2": "housing",
+        "value": 0.25
+      },
+      {
+        "type": "RTH",
+        "name": "r_end_space_ambient",
+        "node1": "end_space_air",
+        "node2": "ambient",
+        "value": 1.0
+      },
+      {
+        "type": "TEMP",
+        "name": "ambient_temp",
+        "node": "ambient",
+        "temperature": 25.0
+      }
+    ],
+    "interface_thermal_resistances": [
+      {
+        "name": "coil_to_stator_slot_liner",
+        "enabled": true,
+        "side_a": {
+          "property_ids": [
+            10
+          ]
+        },
+        "side_b": {
+          "property_ids": [
+            10000,
+            10001,
+            10002,
+            10003,
+            10004,
+            10005
+          ]
+        },
+        "split_side": "side_b",
+        "mode": "thin_layer",
+        "layer_thermal_conductivity": 0.2,
+        "layer_thickness": 0.0002,
+        "assembly": "shared_node_pair_lumped"
+      },
+      {
+        "name": "pm_to_rotor_adhesive",
+        "enabled": true,
+        "side_a": {
+          "property_ids": [
+            20
+          ]
+        },
+        "side_b": {
+          "property_ids": [
+            50000
+          ]
+        },
+        "split_side": "side_b",
+        "mode": "thin_layer",
+        "layer_thermal_conductivity": 0.2,
+        "layer_thickness": 0.0002,
+        "assembly": "shared_node_pair_lumped"
+      }
+    ]
+  }
+}

@@ -15,6 +15,9 @@ Thermal/BDF:
 - `thermal_surface_temperature_summary.csv`: surface temperatures.
 - `thermal_cooling_path_summary.csv`: FEMH and coupling path conductance/flow summary.
 - `thermal_gap_*`: gap pairing, conductance, heat-flow, and h-model diagnostics.
+- `thermal_interface_resistance_*`: shared-node interface resistance node splits,
+  node pairs, conductance, and heat-flow diagnostics.
+- `thermal_result.vtk`: ParaView thermal temperature visualization.
 
 Structural:
 
@@ -28,7 +31,9 @@ Modal/NVH:
 
 - `modal_frequencies.csv`: extracted modal frequencies.
 - `modal_modes.csv`: modal vectors or summaries.
-- `modal_modes_full.neu`: post file with full modal shapes.
+- `modal_modes.vtk`: modal vectors for ParaView.
+- `modal_modes_cyclic_full.vtk`: cyclic-expanded modal visualization when the
+  model uses cyclic/sector assumptions.
 - `motor_nvh_*summary.csv`: high-level NVH summaries.
 - `motor_nvh_*orders.csv`: circumferential/order decomposition.
 - `motor_nvh_*response*.csv`: response and participation data.
