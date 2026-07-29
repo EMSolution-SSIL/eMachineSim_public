@@ -1,0 +1,3 @@
+display_name: eMachineSim
+short_description: Guide electric-machine users through eMachineSim analyses, Python API workflows, inputs, examples, and diagnostics.
+default_prompt: Help me use eMachineSim for an electric-machine thermal, structural, modal/NVH, or electrostatic workflow.

@@ -1,0 +1,9 @@
+﻿# eMachineSim public Python support dependencies.
+#
+# The eMachineSim wheel itself contains the native Python extension module
+# and required native runtime files. It currently has no mandatory pure-Python
+# runtime dependencies for normal Python API solves.
+#
+# Install this file when you also want to use the public MCP server / AI-agent
+# support tools included in this repository.
+mcp>=1.0.0
