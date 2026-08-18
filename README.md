@@ -20,6 +20,7 @@ Documentation site:
 ## Repository Contents
 
 - `Examples/`: public sample datasets referenced by the documentation, SKILLS, and MCP server.
+- `scripts/`: small public helper scripts, such as mesh format conversion utilities used by examples.
 - `skills/`: coding-AI reference files for eMachineSim workflows.
 - `mcp_servers/emachinesim/`: MCP server for AI-agent access to examples, input JSON inspection, diagnostic CSV summaries, guarded JSON variant writing, and Python API based single-case solves.
 - `requirements.txt`: optional Python dependencies for the public MCP/AI-agent support tools.
@@ -37,7 +38,7 @@ Example Windows setup:
 py -3.13 -m venv .venv
 .venv\Scripts\activate
 python -m pip install --upgrade pip
-python -m pip install path\to\emachinesim-0.1.0-cp311-cp311-win_amd64.whl
+python -m pip install path\to\emachinesim-0.1.1-cp311-cp311-win_amd64.whl
 ```
 
 If you also want to use the MCP server or other AI-agent support tools in this repository, install the public support dependencies:
@@ -53,6 +54,13 @@ python -m pip install -e mcp_servers\emachinesim
 ```
 
 Wheels are Python-version specific. Use a `cp311-cp311-win_amd64` wheel for Python 3.11 and a `cp313-cp313-win_amd64` wheel for Python 3.13. A wheel built for one CPython minor version cannot be installed into another CPython minor version.
+
+## Mesh Conversion Helpers
+
+The public `scripts/convert_gmsh41_to_nastran.py` helper converts simple
+Gmsh 4.1 ASCII 2D meshes to free-field Nastran BDF. It is included for examples
+such as `Examples/structural/rotor_45deg`, where the original sector mesh is
+provided as `.msh` and the solver input uses `.bdf`.
 
 ## License File
 
