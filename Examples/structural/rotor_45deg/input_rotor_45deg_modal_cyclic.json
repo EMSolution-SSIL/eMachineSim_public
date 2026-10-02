@@ -1,0 +1,138 @@
+{
+  "metaData": {
+    "type": "eMachineSimInput",
+    "eMachineSimVersion": "0.1.1",
+    "comments": "45 degree 2D structural rotor modal test with auto-detected cyclic sector boundary"
+  },
+  "1_Execution_Control": {
+    "PRE_PROCESSING": 1,
+    "MAKE_SYSTEM_MATRICES": 1,
+    "SOLVE_EQUATION": 1,
+    "POST_PROCESSING": 1
+  },
+  "2_Analysis_Type": {
+    "STATIC": 1,
+    "AC": 0,
+    "DOF_PER_NODE": 3,
+    "ANALYSIS_TYPE": "STRUCTURAL"
+  },
+  "3_Potential_Gauge_Conditions": {
+    "RENUMBERING": 0,
+    "SCALING": 0,
+    "LINE_SEARCH": 0,
+    "MATRIX_ASYMMETRICITY": 0
+  },
+  "4_Shape_Function_Order_Added_Features": {
+    "NODE_ORDER": 1,
+    "QUAD_TRI": 0,
+    "PARALLEL_NO": 0,
+    "PARALLEL_OPTION": 0
+  },
+  "5_Convergence_Conditions": {
+    "ICCG_CONV": 1e-8,
+    "MAX_ITERATIONS": 1000,
+    "SOLVER": 0
+  },
+  "6_Gaussian_Integral_Point": {
+    "POINTS_IN_1D": 3,
+    "POINT_IN_TRIANGLE": 7,
+    "ELEMENT_ORDER": 1
+  },
+  "10_1_Input_Files": {
+    "INPUT_MESH_FILE": "NASTRAN",
+    "MESH_FILE": "rotor_structural.bdf",
+    "UNIT": 0
+  },
+  "10_2_Output_Files": {
+    "POST_DATA_FILE": 5,
+    "ELEM_OUT": 1,
+    "NODE_OUT": 1
+  },
+  "12_Geometry": {
+    "GEOMETRY": 0,
+    "DELTA_Z_THETA": 1.0
+  },
+  "13_Boundary_Conditions": {
+    "FAR_BOUNDARY_CONDITION": 0,
+    "STRUCTURAL_2D": {
+      "ENABLED": 1,
+      "MODE": "PLANE_STRESS",
+      "THICKNESS": 1.0
+    },
+    "STRUCTURAL_CYCLIC_SECTOR_BC": {
+      "ENABLED": 1,
+      "AUTO_DETECT": 1,
+      "AXIS_POINT": [0.0, 0.0, 0.0],
+      "MIN_RADIUS": 1e-8,
+      "ANGLE_TOLERANCE_DEG": 0.05,
+      "FIX_RADIAL": 0,
+      "FIX_TANGENTIAL": 1,
+      "FIX_UZ": 0,
+      "TANGENTIAL_VALUE": 0.0,
+      "PENALTY_STIFFNESS": 1e15
+    },
+    "STRUCTURAL_RADIAL_SUPPORT_BC": {
+      "ENABLED": 1,
+      "AUTO_DETECT": 1,
+      "SIDE": "INNER",
+      "AXIS_POINT": [0.0, 0.0, 0.0],
+      "EXCLUDE_CYCLIC_SECTOR_NODES": 1,
+      "MIN_RADIUS": 1e-8,
+      "RADIUS_TOLERANCE_ABS": 1e-6,
+      "RADIUS_TOLERANCE_REL": 1e-4,
+      "FIX_RADIAL": 1,
+      "FIX_TANGENTIAL": 0,
+      "FIX_UZ": 0,
+      "RADIAL_VALUE": 0.0,
+      "PENALTY_STIFFNESS": 1e15
+    },
+    "STRUCTURAL_MODAL": {
+      "ENABLED": 1,
+      "NUM_MODES": 6,
+      "SOLVER": "SPARSE",
+      "MASS_MATRIX": "CONSISTENT",
+      "MASS_NORMALIZE": 1,
+      "REMOVE_RIGID_BODY_MODES": 1,
+      "RIGID_BODY_FREQUENCY_THRESHOLD": 1.0,
+      "SPECTRAL_SHIFT": 1.0e8,
+      "MAX_ITERATIONS": 3000,
+      "TOLERANCE": 1e-9
+    }
+  },
+  "16_Material_Properties": {
+    "16_1_3D_Element_Properties": [
+      {
+        "MAT_ID": 20,
+        "ElasticProperty": {
+          "E": 2.05e11,
+          "nu": 0.3,
+          "rho": 7800.0
+        }
+      },
+      {
+        "MAT_ID": 30,
+        "ElasticProperty": {
+          "E": 2.05e11,
+          "nu": 0.3,
+          "rho": 7800.0
+        }
+      },
+      {
+        "MAT_ID": 50000,
+        "ElasticProperty": {
+          "E": 1.6e11,
+          "nu": 0.24,
+          "rho": 7500.0
+        }
+      },
+      {
+        "MAT_ID": 50001,
+        "ElasticProperty": {
+          "E": 1.6e11,
+          "nu": 0.24,
+          "rho": 7500.0
+        }
+      }
+    ]
+  }
+}
