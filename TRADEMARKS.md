@@ -2,8 +2,6 @@
 
 Copyright (c) Science Solutions International Laboratory, Inc. All rights reserved.
 
-**Draft notice:** This document is a draft trademark and brand-asset notice for legal review. It is not legal advice and should be reviewed by qualified legal counsel before public release or enforcement.
-
 The names **eMachineSim**, **EMSolution**, **eMotorSolution**, **EMSOptimizer**, **SSIL**, and **Science Solutions International Laboratory**, together with related logos, icons, product names, screenshots, diagrams, and brand assets, are trademarks, service marks, trade names, or trademark-like identifiers of Science Solutions International Laboratory, Inc. or its affiliates.
 
 ## No Trademark License

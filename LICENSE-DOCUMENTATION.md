@@ -2,8 +2,6 @@
 
 Copyright (c) Science Solutions International Laboratory, Inc. All rights reserved.
 
-**Draft notice:** This document is a draft license for legal review. It is not legal advice and should be reviewed by qualified legal counsel before public release or enforcement.
-
 This Documentation and SKILLS License governs the documentation and skill materials in this repository, except where another license file or third-party license expressly applies.
 
 ## 1. Definitions
@@ -71,9 +69,9 @@ Your rights under this license terminate automatically if you breach its terms. 
 
 The Documentation and SKILLS are provided "as is" without warranty of any kind, including warranties of accuracy, completeness, fitness for a particular purpose, merchantability, or non-infringement. SSIL has no obligation to provide support, maintenance, updates, corrections, or availability for these materials.
 
-## 10. Governing Law Draft
+## 10. Governing Law
 
-This draft is intended to be interpreted under the laws of Japan, without regard to conflict-of-law rules, subject to final legal review and any separate written agreement between SSIL and the user.
+This license is governed by and interpreted under the laws of Japan, without regard to conflict-of-law rules, subject to any separate written agreement between SSIL and the user.
 
 ## 11. Conflicts
 

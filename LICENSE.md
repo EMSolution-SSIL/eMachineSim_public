@@ -2,8 +2,6 @@
 
 Copyright (c) Science Solutions International Laboratory, Inc. All rights reserved.
 
-**Draft notice:** This license summary is a draft prepared for review. It is not legal advice and should be reviewed by qualified legal counsel before public release or enforcement.
-
 This repository is made publicly available to support eMachineSim documentation, evaluation, learning, and user-support workflows. It contains public documentation, Docusaurus site sources, eMachineSim SKILLS, and public sample materials. It does **not** contain the proprietary eMachineSim product source code, license-protection implementation, private algorithms, or internal development materials.
 
 This repository is **not** licensed under an open-source license such as MIT, Apache, BSD, or GPL. It is provided under a source-available / publicly available documentation license model for limited eMachineSim-related use.

@@ -2,8 +2,6 @@
 
 Copyright (c) Science Solutions International Laboratory, Inc. All rights reserved.
 
-**Draft notice:** This document is a draft license for legal review. It is not legal advice and should be reviewed by qualified legal counsel before public release or enforcement.
-
 This Sample Code License governs public sample scripts, sample input files, and sample execution helpers made available in this repository for eMachineSim evaluation, learning, and user support.
 
 ## 1. Covered Materials

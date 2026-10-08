@@ -24,7 +24,7 @@ Documentation site:
 - `skills/`: coding-AI reference files for eMachineSim workflows.
 - `mcp_servers/emachinesim/`: MCP server for AI-agent access to examples, input JSON inspection, diagnostic CSV summaries, guarded JSON variant writing, and Python API based single-case solves.
 - `requirements.txt`: optional Python dependencies for the public MCP/AI-agent support tools.
-- `LICENSE*.md`, `NOTICE.md`, `TRADEMARKS.md`: license and notice drafts for public review.
+- `LICENSE*.md`, `NOTICE.md`, `TRADEMARKS.md`: license, notice, and trademark terms for this public repository.
 
 The eMachineSim C/C++ source code and internal debug executable are not part of this public repository. Normal user workflows should use the installed Python wheel and the `eMachineSim` Python module.
 
@@ -143,8 +143,6 @@ This public repository is **not** distributed under an open-source license. It i
 - Sample scripts, sample `input.json` files, and public example materials are governed by [`LICENSE-SAMPLE-CODE.md`](./LICENSE-SAMPLE-CODE.md).
 - Logos, product names, screenshots, icons, diagrams, and other brand assets are governed by [`TRADEMARKS.md`](./TRADEMARKS.md) and are not licensed for reuse.
 - Competitive use, redistribution, modified public distribution, and incorporation into competing products, competing services, or competing AI assistance features are prohibited unless Science Solutions International Laboratory, Inc. grants prior written permission.
-
-These license files are draft materials prepared for legal review before formal public release.
 
 ## Contact
 
